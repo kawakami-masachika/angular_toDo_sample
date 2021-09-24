@@ -1,0 +1,8 @@
+
+<div class="addlist">
+  <form [formGroup]="listAddForm" (ngSubmit)="addList()" class="">
+    <input id="title" type="title" formControlName="title" class="text-input" placeholder="Add New List">
+    <button type="submit" class="add-button" [class.btn-disabled]="listAddForm.valid" [disabled]="listAddForm.invalid">Add</button>
+  </form>
+</div>
+

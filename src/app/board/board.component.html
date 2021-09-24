@@ -1,0 +1,15 @@
+<div>
+  <header>
+    my ToDoApp
+  </header>
+  <main>
+    <p class="info-line">All: {{ totalCardCount }} tasks</p> 
+    <app-list-add></app-list-add>
+    <div class="list-index">
+      <span  *ngFor="let todo of toDoList$ | async">
+          <app-list [taskState]="todo" [taskList]="todo.card" ></app-list>
+      </span>
+    </div>
+  </main>
+</div>
+

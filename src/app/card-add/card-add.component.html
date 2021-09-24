@@ -1,0 +1,7 @@
+<div class="addcard">
+  <form [formGroup]="cardAddForm" (ngSubmit)="addTask()">
+    <input id="taskName" type="taskName" formControlName="taskName" class="text-input" placeholder="Add New Task">
+    <button type="submit" class="add-button" [class.btn-disabled]="cardAddForm.valid"
+      [disabled]="cardAddForm.invalid">Add</button>
+  </form>
+</div>
