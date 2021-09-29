@@ -7,12 +7,12 @@ export interface ToDoListState {
   list: { id: number, title: string; card: {taskId: number, taskName: string}[]}[];
 };
 
-@StoreConfig({ name: 'toDoList'})
+@StoreConfig({ name: 'toDoList' })
 export class ToDoListStore extends EntityStore<ToDoListState> {
   list: {
     id: number;
     title: string;
-    card: { id: number; taskName: string }[];
+    card: { taskId: number; taskName: string }[];
   }[];
   constructor() {
     super(createInitialState());

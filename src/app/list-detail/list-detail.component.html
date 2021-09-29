@@ -1,0 +1,7 @@
+<p>リスト詳細画面</p>
+<div class="list">
+  <p class="list-title">{{list.title}}</p>
+  <span *ngFor="let task of list.card">
+    <app-card [task]="task" [listId]="list.id"></app-card>
+  </span>
+</div>

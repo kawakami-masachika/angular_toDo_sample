@@ -1,5 +1,7 @@
 <div class="list">
-  <p class="list-title">{{taskState.title}}</p>
+  <p class="list-title">
+    <a routerLink="lists/{{taskState.id}}">{{taskState.title}}</a>
+  </p>
   <span (click)="deleteList(taskState.id)">✕</span>
   <span *ngFor="let task of taskList">
     <app-card [task]="task" [listId]="taskState.id"></app-card>

@@ -1,4 +1,4 @@
 <div class="card">
     <button class="close-button" (click)="deleteTask(listId, task.taskId)">✕</button>
-    <p>タスク内容：{{task.taskName}}</p>
+    <p><a [routerLink]="['/cards', task.taskId]">タスク内容：{{task.taskName}}</a></p>
 </div>
