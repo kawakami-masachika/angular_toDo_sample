@@ -1,6 +1,6 @@
 <div class="list">
   <p class="list-title">
-    <a routerLink="lists/{{taskState.id}}">{{taskState.title}}</a>
+    <a routerLink="/lists/{{taskState.id}}">{{taskState.title}}</a>
   </p>
   <span (click)="deleteList(taskState.id)">✕</span>
   <span *ngFor="let task of taskList">

@@ -12,7 +12,17 @@ export class ToDoListQuery extends Query<ToDoListState> {
     title: string;
     card: { taskId: number; taskName: string }[];
   } {
-    let targetIndex : number = this.store.getValue().list.findIndex(({ id }) => id == listId);
+    let targetIndex: number = this.store
+      .getValue()
+      .list.findIndex(({ id }) => id == listId);
     return this.store.getValue().list[targetIndex];
+  }
+  getCard(
+    listId: number,
+    cardId: number
+  ): { taskId: number, taskName: string } {
+    let allList = this.store.getValue()
+    let targetList = allList.list[allList.list.findIndex(({ id }) => id == listId)];
+    return targetList.card[ targetList.card.findIndex(({ taskId }) => taskId == cardId) ];
   }
 }

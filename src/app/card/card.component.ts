@@ -18,6 +18,9 @@ export class CardComponent implements OnInit {
       this.toDoListService.deleteTask(ListId, TaskId);
     }
   }
+  public link = "";
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.link = `/lists/${this.listId}/cards/${this.task.taskId}`;
+  }
 }
